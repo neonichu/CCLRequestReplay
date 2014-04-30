@@ -28,5 +28,8 @@ Pod::Spec.new do |spec|
   spec.subspec 'Blueprint' do |blueprint_spec|
     blueprint_spec.source_files = 'CCLRequestReplay/CCLRequestReplayManager+Blueprint.{h,m}'
   end
-end
 
+  spec.subspec 'JSON' do |json_spec|
+    json_spec.source_files = 'CCLRequestReplay/CCLRequestJSONRecording.{h,m}'
+  end
+end
