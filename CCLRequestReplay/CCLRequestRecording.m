@@ -74,6 +74,9 @@
 #pragma mark - Matching
 
 - (BOOL)matchesRequest:(NSURLRequest *)request {
+    if (self.matcher) {
+        return self.matcher(request);
+    }
     return [[[self request] URL] isEqual:[request URL]] && [[[self request] HTTPMethod] isEqualToString:[request HTTPMethod]];
 }
 

@@ -7,8 +7,6 @@
 
 #import "CCLRequestRecording.h"
 
-typedef BOOL(^CCLURLRequestMatcher)(NSURLRequest* request);
-
 @interface CCLRequestJSONRecording : NSObject <CCLRequestRecordingProtocol>
 
 -(id)initWithBundledJSONNamed:(NSString*)JSONName

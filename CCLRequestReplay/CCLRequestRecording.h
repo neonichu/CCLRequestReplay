@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+typedef BOOL(^CCLURLRequestMatcher)(NSURLRequest* request);
 
 @protocol CCLRequestRecordingProtocol <NSObject, NSSecureCoding>
 
@@ -31,5 +32,6 @@
 @property (nonatomic, copy, readonly) NSURLResponse *response;
 @property (nonatomic, copy, readonly) NSData *data;
 @property (nonatomic, copy, readonly) NSError *error;
+@property (nonatomic, copy) CCLURLRequestMatcher matcher;
 
 @end
