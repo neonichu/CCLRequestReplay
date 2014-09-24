@@ -18,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		65F798DCA91C21F48F0B6630 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		77756B3D18965FE400A55DB0 /* CCLRequestRecordingTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLRequestRecordingTest.m; sourceTree = "<group>"; };
 		77756B3F1896626600A55DB0 /* CCLRequestRecordProtocolTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLRequestRecordProtocolTest.m; sourceTree = "<group>"; };
 		77D7FD771903416E00D76614 /* CCLRequestReplayManagerBlueprint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLRequestReplayManagerBlueprint.m; sourceTree = "<group>"; };
@@ -28,8 +29,8 @@
 		77F710361891A40D00828235 /* CCLRequestReplayManagerTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCLRequestReplayManagerTest.m; sourceTree = "<group>"; };
 		77F710381891A40D00828235 /* CCLRequestReplayTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CCLRequestReplayTests-Prefix.pch"; sourceTree = "<group>"; };
 		77F7103C1891BC8200828235 /* CCLRequestReplayProtocolTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLRequestReplayProtocolTest.m; sourceTree = "<group>"; };
-		AE0C05A30E1A465B91E56DC3 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		C65DFCB8E8DB4891902A78A9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D51AE160A4F60E47D0096AAB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,13 +46,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A835ED81AB3C97D1CB50A8C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D51AE160A4F60E47D0096AAB /* Pods.debug.xcconfig */,
+				65F798DCA91C21F48F0B6630 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		77F710201891A3D900828235 = {
 			isa = PBXGroup;
 			children = (
 				77F710301891A40D00828235 /* CCLRequestReplayTests */,
 				77F7102D1891A40D00828235 /* Frameworks */,
 				77F7102C1891A40D00828235 /* Products */,
-				AE0C05A30E1A465B91E56DC3 /* Pods.xcconfig */,
+				1A835ED81AB3C97D1CB50A8C /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -181,7 +191,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -228,7 +238,7 @@
 		};
 		77F710391891A40D00828235 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AE0C05A30E1A465B91E56DC3 /* Pods.xcconfig */;
+			baseConfigurationReference = D51AE160A4F60E47D0096AAB /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -276,7 +286,7 @@
 		};
 		77F7103A1891A40D00828235 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AE0C05A30E1A465B91E56DC3 /* Pods.xcconfig */;
+			baseConfigurationReference = 65F798DCA91C21F48F0B6630 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
