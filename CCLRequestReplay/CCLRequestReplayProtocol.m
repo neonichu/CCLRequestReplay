@@ -60,7 +60,7 @@ static NSMutableSet *_managers;
     id<CCLRequestRecordingProtocol> recording = [[self class] recordingForRequest:[self request]];
 
     if (!recording) {
-        return nil;
+        return;
     }
 
     NSError *error = [recording errorForRequest:[self request]];
